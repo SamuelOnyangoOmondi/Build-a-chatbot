@@ -54,6 +54,15 @@ streamlit run app.py
 
 This will start a local web server and open a new tab in your default web browser to display your application.
 
+# Plas-tech Chatbot
+
+## Screenshot
+
+Here is a screenshot of the Plas-tech Chatbot interface:
+
+![Plas-tech Chatbot Screenshot](screenshot.png)
+
+
 Accessing the Deployed Chatbot
 The chatbot is also deployed and accessible online. You can interact with the chatbot at the following URL:
 
