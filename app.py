@@ -4,7 +4,7 @@ import json
 from sentence_transformers import SentenceTransformer, util
 
 # Load the dataset
-dataset_path = r'plas_tech_dataset (1).json'
+dataset_path = 'plas_tech_dataset (1).json'
 with open(dataset_path, 'r') as file:
     data = json.load(file)
 
@@ -28,9 +28,11 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 context_embeddings = model.encode(df['context'].tolist(), convert_to_tensor=True)
 
 # Build the Chatbot Interface
-def chatbot_response(user_input):
-    user_input = preprocess_text(user_input)
-    user_input_embedding = model.encode(user_input, convert_to_tensor=True)
+def chatbot_response(user_input, conversation_history):
+    # Combine the conversation history with the new user input
+    combined_input = ' '.join(conversation_history + [user_input])
+    combined_input = preprocess_text(combined_input)
+    user_input_embedding = model.encode(combined_input, convert_to_tensor=True)
     
     # Compute cosine similarities
     cosine_scores = util.pytorch_cos_sim(user_input_embedding, context_embeddings)[0]
@@ -44,8 +46,22 @@ def chatbot_response(user_input):
 st.title("Plas-tech Chatbot")
 st.write("Welcome to the Plas-tech Chatbot! Type your question below and press Enter.")
 
+# Initialize or load the conversation history
+if 'conversation_history' not in st.session_state:
+    st.session_state.conversation_history = []
+
 user_input = st.text_input("You: ")
 
 if user_input:
-    response = chatbot_response(user_input)
+    response = chatbot_response(user_input, st.session_state.conversation_history)
+    st.session_state.conversation_history.append(user_input)
+    st.session_state.conversation_history.append(response)
     st.write(f"Chatbot: {response}")
+
+# Display conversation history
+st.write("### Conversation History")
+for i, msg in enumerate(st.session_state.conversation_history):
+    if i % 2 == 0:
+        st.write(f"**You:** {msg}")
+    else:
+        st.write(f"**Chatbot:** {msg}")
