@@ -1,5 +1,10 @@
 # Plas-tech Chatbot
 
+## Accessing the Deployed Chatbot
+The chatbot is also deployed and accessible online. You can interact with the chatbot at the following URL:
+
+[Plas-tech Chatbot](https://samuelonyangoomondi-build-a-chatbot-app-qqhynw.streamlit.app/)
+
 ## Overview
 This repository contains the code and data to create a chatbot using the BERT model. The chatbot is designed to provide information about Plas-tech Energies Limited, a company dedicated to converting plastic waste into clean cooking gas. The chatbot uses a custom dataset closely related to the mission of Plas-tech.
 
@@ -44,6 +49,15 @@ The BERT model is fine-tuned on the custom dataset to provide accurate responses
     ```sh
     pip install -r requirements.txt
     ```
+
+## Running the Application
+
+To run the Streamlit application locally:
+
+```sh
+streamlit run app.py
+
+
 # Plas-tech Chatbot
 
 ## Screenshot
@@ -52,12 +66,6 @@ Here is a screenshot of the Plas-tech Chatbot interface:
 
 ![Plas-tech Chatbot Screenshot](./screenshot.png)
 
-## Running the Application
-
-To run the Streamlit application locally:
-
-```sh
-streamlit run app.py
 
 This will start a local web server and open a new tab in your default web browser to display your application.
 
