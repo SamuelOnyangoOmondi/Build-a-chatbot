@@ -53,7 +53,7 @@ To run the Streamlit application locally:
 streamlit run app.py
 This will start a local web server and open a new tab in your default web browser to display your application.
 
-**Accessing the Deployed Chatbot**
+## **Accessing the Deployed Chatbot**
 The chatbot is also deployed and accessible online. You can interact with the chatbot at the following URL:
 
 https://samuelonyangoomondi-build-a-chatbot-app-qqhynw.streamlit.app/
