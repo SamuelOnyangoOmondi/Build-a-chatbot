@@ -44,6 +44,13 @@ The BERT model is fine-tuned on the custom dataset to provide accurate responses
     ```sh
     pip install -r requirements.txt
     ```
+# Plas-tech Chatbot
+
+## Screenshot
+
+Here is a screenshot of the Plas-tech Chatbot interface:
+
+![Plas-tech Chatbot Screenshot](./screenshot.png)
 
 ## Running the Application
 
@@ -53,14 +60,6 @@ To run the Streamlit application locally:
 streamlit run app.py
 
 This will start a local web server and open a new tab in your default web browser to display your application.
-
-# Plas-tech Chatbot
-
-## Screenshot
-
-Here is a screenshot of the Plas-tech Chatbot interface:
-
-![Plas-tech Chatbot Screenshot](./screenshot.png)
 
 Accessing the Deployed Chatbot
 The chatbot is also deployed and accessible online. You can interact with the chatbot at the following URL:
