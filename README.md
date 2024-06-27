@@ -51,6 +51,7 @@ To run the Streamlit application locally:
 
 ```sh
 streamlit run app.py
+
 This will start a local web server and open a new tab in your default web browser to display your application.
 
 Accessing the Deployed Chatbot
