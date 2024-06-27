@@ -60,8 +60,7 @@ This will start a local web server and open a new tab in your default web browse
 
 Here is a screenshot of the Plas-tech Chatbot interface:
 
-![Plas-tech Chatbot Screenshot](screenshot.png)
-
+![Plas-tech Chatbot Screenshot](./screenshot.png)
 
 Accessing the Deployed Chatbot
 The chatbot is also deployed and accessible online. You can interact with the chatbot at the following URL:
