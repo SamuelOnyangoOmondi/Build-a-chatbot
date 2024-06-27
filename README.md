@@ -56,7 +56,8 @@ This will start a local web server and open a new tab in your default web browse
 Accessing the Deployed Chatbot
 The chatbot is also deployed and accessible online. You can interact with the chatbot at the following URL:
 
-Plas-tech Chatbot
+[Plas-tech Chatbot](https://samuelonyangoomondi-build-a-chatbot-app-qqhynw.streamlit.app/)
+
 
 Examples of Conversations
 Below are some examples of conversations with the chatbot:
