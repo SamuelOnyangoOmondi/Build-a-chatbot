@@ -76,3 +76,12 @@ The performance of the chatbot model is evaluated based on the accuracy of the r
 
 Contributing
 If you would like to contribute to this project, please fork the repository and submit a pull request.
+
+
+### Final Steps
+
+1. **Ensure the screenshot file is named `screenshot.png` and placed in your repository's root directory**.
+2. **Commit and push the changes to your GitHub repository**.
+
+This will display the screenshot in your `README.md` file.
+
