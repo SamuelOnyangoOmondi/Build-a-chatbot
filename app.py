@@ -48,13 +48,15 @@ st.write("Welcome to the Plas-tech Chatbot! Type your question below and press E
 if 'conversation_history' not in st.session_state:
     st.session_state.conversation_history = []
 
+# Text input for user query
 user_input = st.text_input("You: ", key="user_input")
 
-if st.button("Send") or st.session_state.user_input:
-    response = chatbot_response(st.session_state.user_input)
-    st.session_state.conversation_history.append(("You", st.session_state.user_input))
-    st.session_state.conversation_history.append(("Chatbot", response))
-    st.session_state.user_input = ""
+if st.button("Send"):
+    if user_input:
+        response = chatbot_response(user_input)
+        st.session_state.conversation_history.append(("You", user_input))
+        st.session_state.conversation_history.append(("Chatbot", response))
+        st.session_state.user_input = ""  # Clear input after response
 
 # Display conversation history
 st.write("### Conversation History")
