@@ -48,18 +48,19 @@ st.write("Welcome to the Plas-tech Chatbot! Type your question below and press E
 if 'conversation_history' not in st.session_state:
     st.session_state.conversation_history = []
 
+if 'user_input' not in st.session_state:
+    st.session_state.user_input = ''
+
 # Text input for user query
-input_placeholder = st.empty()
-user_input = input_placeholder.text_input("You: ", key="user_input")
+user_input = st.text_input("You: ", key="input_box", value=st.session_state.user_input)
 
 if st.button("Send"):
     if user_input:
         response = chatbot_response(user_input)
         st.session_state.conversation_history.append(("You", user_input))
         st.session_state.conversation_history.append(("Chatbot", response))
-        
-        # Clear the input field by re-rendering the text input
-        input_placeholder.text_input("You: ", value="", key="user_input")
+        st.session_state.user_input = ''  # Clear the input after response
+        st.experimental_rerun()  # Rerun the script to clear the input box
 
 # Display conversation history
 st.write("### Conversation History")
