@@ -4,7 +4,7 @@ import json
 from sentence_transformers import SentenceTransformer, util
 
 # Load the dataset
-dataset_path = 'C:\Users\Lenovo\Desktop\Plas-tech Chat Bot\Build-a-chatbot\plas_tech_dataset (1).json'
+dataset_path = r'C:\Users\Lenovo\Desktop\Plas-tech Chat Bot\Build-a-chatbot\plas_tech_dataset (1).json'
 with open(dataset_path, 'r') as file:
     data = json.load(file)
 
