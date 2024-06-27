@@ -1,5 +1,3 @@
-# Create README.md
-readme_content = """
 # Plas-tech Chatbot
 
 ## Overview
