@@ -31,6 +31,14 @@ The BERT model is fine-tuned on the custom dataset to provide accurate responses
 - `.gitattributes`: Specifies attributes for Git LFS.
 - `README.md`: This README file.
 
+  # Plas-tech Chatbot
+
+## Screenshot
+
+Here is a screenshot of the Plas-tech Chatbot interface:
+
+![Plas-tech Chatbot Screenshot](./screenshot.png)
+
 ## Installation
 
 1. **Clone the repository**:
@@ -56,15 +64,6 @@ To run the Streamlit application locally:
 
 ```sh
 streamlit run app.py
-
-
-# Plas-tech Chatbot
-
-## Screenshot
-
-Here is a screenshot of the Plas-tech Chatbot interface:
-
-![Plas-tech Chatbot Screenshot](./screenshot.png)
 
 
 This will start a local web server and open a new tab in your default web browser to display your application.
