@@ -49,14 +49,17 @@ if 'conversation_history' not in st.session_state:
     st.session_state.conversation_history = []
 
 # Text input for user query
-user_input = st.text_input("You: ", key="user_input")
+input_placeholder = st.empty()
+user_input = input_placeholder.text_input("You: ", key="user_input")
 
 if st.button("Send"):
     if user_input:
         response = chatbot_response(user_input)
         st.session_state.conversation_history.append(("You", user_input))
         st.session_state.conversation_history.append(("Chatbot", response))
-        st.session_state.user_input = ""  # Clear input after response
+        
+        # Clear the input field by re-rendering the text input
+        input_placeholder.text_input("You: ", value="", key="user_input")
 
 # Display conversation history
 st.write("### Conversation History")
